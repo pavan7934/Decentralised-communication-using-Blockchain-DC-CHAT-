@@ -1,0 +1,616 @@
+@import url("fancybuttons.css");
+body {
+  margin-left: 0%;
+  margin-right: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  border: 0px solid DarkGray;
+  font-size: 12px;
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: #ccc;
+}
+
+span[type=addressTitle] {
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center;
+  color: gray;
+  word-break: break-all;
+}
+
+span[type=receivedMessageContent] {
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center;
+  color: #2E86C1;
+}
+
+span[type=receivedMessageTitle] {
+  font-size: 12px;
+  vertical-align: top;
+  text-align: center;
+  color: Black;
+}
+
+a[type=addressLinks] {
+  padding: 0px;
+  font-size: 15px;
+  vertical-align: top;
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  width: 75%;
+  border: 0px solid #000;
+  outline: none;
+  padding-left: 0px;
+  word-break: break-all;
+}
+
+textarea[type=mySimpleLabel] {
+  padding: 0px;
+  color: #666;
+  font-size: 12px;
+  vertical-align: top;
+  resize: none;
+  overflow: hidden;
+  height: auto;
+  width: 75%;
+  border: 0px solid #000;
+  outline: none;
+  padding-left: 0px;
+  word-break: break-all;
+}
+
+input[type=loginButton] {
+  padding: 0px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  border: 1.0px solid #000;
+  border-radius: 1px;
+  height: 25px;
+  width: 100%;
+  vertical-align: top;
+  text-align: center;
+  color: Black;
+  outline: none;
+}
+
+option{
+color: #6e0e0e;
+border-radius: 15px;
+border: 2px solid red;
+}
+
+select[type=registeredUsersAddressMenu] {
+  width: auto;
+  height: 35px;
+  display: block;
+  border-radius: 18px;
+  padding-right: 0px;
+  background-color: White;
+  border: 1.0px solid rgb(230, 217, 217);
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: left;
+  overflow: hidden;
+  outline: none;
+  color: rgb(114, 14, 14);
+  font-weight: 600;
+}
+
+button[type=clearInboxButton] {
+  padding: 0px;
+  font-size: 12px;
+  margin-top: 0px;
+  border-radius: 1px;
+  border-style: solid;
+  border: 1.0px solid #000;
+  height: 30px;
+  line-height: 30px;
+  width: 60px;
+  text-align: center;
+  background-color: #EEE;
+  outline: none;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=myDefaultButton] {
+  padding-left: 20px;
+  font-size: 12px;
+  margin-top: 0px;
+  border-radius: 1px;
+  border: 1.0px solid #000;
+  height: 20px;
+  line-height: 30px;
+  width: 60px;
+  text-align: center;
+  background-color: #EEE;
+  outline: none;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=checkbox] {
+  vertical-align: middle;
+}
+
+input[type=betaButton] {
+  padding: 0px;
+  font-size: 14px;
+  margin-top: 0px;
+  border-radius: 1px;
+  border: 1.0px solid #000;
+  height: 30px;
+  line-height: 30px;
+  width: 100px;
+  text-align: center;
+  color: White;
+  background-color: #666;
+  outline: none;
+  user-select: none;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
+input[type=number] {
+  padding: 0px;
+  font-size: 12px;
+  border: 0px solid #000;
+  border-radius: 1px;
+  height: 25px;
+  width: 50px;
+  text-align: center;
+}
+
+input[type=submit] {
+  padding: 10px;
+  font-size: 12px;
+  border: 1.0px solid #000;
+  border-radius: 1px;
+  height: 35px;
+  width: 80px;
+  vertical-align: top;
+  outline: none;
+}
+
+input[type=text] {
+  border: 1.0px solid #000;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 1px;
+  vertical-align: top;
+}
+
+input[type=rightArrow] {
+  padding: 0px;
+  font-size: 12px;
+  border-radius: 1px;
+  height: 20px;
+  width: 40px;
+  text-align: right;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+
+input[type=leftArrow] {
+  padding: 0px;
+  font-size: 12px;
+  border-radius: 1px;
+  height: 20px;
+  width: 40px;
+  text-align: left;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+
+textarea[type=myInputTextArea] {
+  border: 1px solid wheat;
+  height: 35px;
+  padding: 10px;
+  border-radius: 15px;
+  vertical-align: top;
+  resize: none;
+  user-select: none;
+  outline: none;
+  overflow: hidden;
+  color: rgb(114, 14, 14);
+  font-weight: 600;
+}
+
+::placeholder{
+  color:rgb(129, 9, 153);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+textarea[type=messageTextArea] {
+  border: 1px solid whitesmoke;
+  font-size: 20px;
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+  line-height: 26px;
+  overflow: hidden;
+  color: #666;
+  background-color: White;
+  display: block;
+  width: 96%;
+  height: 35px;
+  color: #2E86C1;
+  padding-left: 5px;
+}
+
+textarea[type=userAddresses] {
+  border: 1.0px solid rgb(247, 244, 244);
+  padding: 0px;
+  font-size: 12px;
+  border-radius: 1px;
+  vertical-align: top;
+  resize: vertical;
+  scroll-behavior: smooth;
+  user-select: none;
+  outline: none;
+  overflow: hidden;
+}
+
+button[type=FAQandHelpButton] {
+  background-color: Transparent;
+  padding: 0px;
+  font-size: 10px;
+  border: 1.0px solid #000;
+  height: 25px;
+  width: 50px;
+  vertical-align: middle;
+  outline: none;
+  top: 0px;
+  right: 0px;
+}
+
+button[type=helpButton] {
+  padding: 0px;
+  font-size: 14px;
+  border: 1.0px solid #000;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  outline: none;
+  position: relative;
+  top: 0px;
+  right: 0px;
+}
+
+button[type=metamask-install-button] {
+  background-color: Transparent;
+  background-image: url('');
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+button[type=metamask-install-button]:focus {
+  border: none;
+  outline: none;
+}
+
+button[type=helpButton]:hover {
+  background-color: #ff4d4d;
+}
+
+h1, h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  word-break: break-all;
+}
+
+h2 {
+  color: #AAA;
+  font-size: 12px;
+  margin-top: -10px;
+  word-break: break-all;
+}
+
+h3 {
+  font-weight: normal;
+  color: #AAA;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.black {
+  color: black;
+}
+
+#balance {
+  color: black;
+}
+
+#messageCounter {
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 0px;
+  overflow: hidden;
+  padding-right: 0px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#numReceivedMessages {
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 0px;
+  overflow: hidden;
+  padding-right: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #666;
+}
+
+#numRegisteredUsers {
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 0px;
+  overflow: hidden;
+  padding-right: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #666;
+}
+
+#numSentMessages {
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 0px;
+  overflow: hidden;
+  padding-right: 0px;
+  text-align: center;
+  vertical-align: middle;
+  color: #666;
+}
+
+#footnote {
+  font-size: 10px;
+  display: inline-block;
+  padding: 5px 0px;
+  overflow: hidden;
+  padding-right: 0px;
+  height: 25px;
+  text-align: left;
+  vertical-align: middle;
+  color: #666;
+}
+
+.hint {
+  color: #666;
+}
+
+.loader {
+  border: 1px solid White;
+  /* Light grey */
+  border-top: 1px solid Red;
+  /* #2E86C1 */
+  border-bottom: 1px solid Red;
+  /* #2E86C1 */
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* The Modal (background) */
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content-register-confirmation {
+  background-color: #fefefe;
+  margin: 18% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-beta {
+  background-color: #fefefe;
+  margin: 7% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 50%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-zerobalance {
+  background-color: #fefefe;
+  margin: 18% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-register {
+  background-color: #fefefe;
+  margin: 18% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-metamask {
+  background-color: #fefefe;
+  margin: 18% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-help {
+  background-color: #fefefe;
+  margin: 8% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+.modal-content-FAQ {
+  background-color: #fefefe;
+  margin: 8% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1.0px solid #000;
+  width: 37%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaa;
+  float: right;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*Tables*/
+td:hover{
+background-color: rgb(214, 207, 207);
+}
+
+#scrollable-content {
+  height: 420px;
+  border: 1px black solid;
+  padding: 3%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: White;
+}
+table.blueTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #6D2BAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(50, 3, 61);
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: rgb(65, 135, 182);
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #441205;
+}
+table.blueTable thead th {
+  font-size: 18px;
+  font-weight: bold;
+  color: #FFF4ED;
+  text-align: center;
+  border-left: 2px solid #1C6EA4;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+   
+textarea {
+	display: block;
+
+	border: 0;
+	padding: 0px 0px;
+  background: rgb(250, 241, 241) no-repeat;
+	
+	/*
+	* IMPORTANT PART HERE
+	*/
+	
+  /* 2 imgs : 1px gray line (normal state) AND 2px green line (focus state) */
+	background-image: linear-gradient(to bottom, #1abc9c, #1abc9c), linear-gradient(to bottom, silver, silver);
+	/* sizes for the 2 images (default state) */
+	background-size: 0 3px, 100% 2px;
+	/* positions for the 2 images. Change both "50%" to "0%" or "100%" and tri again */
+	background-position: 0% 100%, 50% 100%;
+
+	/* animation solely on background-size */
+  transition: background-size 0.8s cubic-bezier(0.64, 0.09, 0.08, 1);
+
+}
+

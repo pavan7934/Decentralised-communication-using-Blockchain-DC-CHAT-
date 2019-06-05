@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<head>
+  <title>DChat</title>
+  <link href="css/app.css" rel="stylesheet">
+  <link href="css/buttons.css" rel="stylesheet">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+  <script src="jquery-latest.min.js"></script>
+  <script src="js/jquery.tablesort.js"></script>
+  <script src="js.cookie.min.js"></script>
+  <script src="js/aes.js"></script>
+  <style>
+  
+  input:focus,
+  textarea:focus{
+    /* sizes for the 2 images (focus state) */
+    background-size: 100% 5px, 100% 4px;
+    outline: none;
+  }
+  .navbar-nav{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+  }
+  .navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+  padding-top: 2px;
+  }
+  div.first {
+    background: rgba(116, 177, 118, 0.2);
+  }
+  div.second {
+    background: rgba(116, 177, 118, 0.2);
+  }
+  body {
+  background-image: url("jpg");
+  background-size: 100%;
+  background-color: #cccccc;
+  }
+  .navbar-brand img{
+    height: 90px;
+    width: 200px;
+
+  }
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+  }
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+  .navbar {
+    background: url("7.jpg") no-repeat;
+    background-size: 100%;
+    opacity: 0.9;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+  body {
+    padding: 3em;
+  }
+  a {
+    color: blue;
+    font: bold 3.1em/1.5 'Fjalla One', sans-serif;
+    text-decoration: none;
+
+    -webkit-transition: .2s;
+  }
+  a:hover {
+    color: hotPink;
+  }
+
+  @media (-webkit-min-device-pixel-ratio:0) {
+    a {
+      background-color: rgb(7, 128, 175);
+      background-image: -webkit-linear-gradient(left, rgb(92, 6, 49) 10%,  rgb(73, 4, 7) 50%, transparent 50%);
+      background-position: 100% 0;
+      background-size: 200% 200%;
+      color: transparent;
+      -webkit-transition: .1s .2s;
+      -webkit-background-clip: text;
+    }
+    a:hover {
+      background-position: 0 0;
+      color: transparent;
+      transition: .4s 0;
+    }
+  }
+
+    p {
+      color: blue;
+      font: bold 1em 'Fjalla One', sans-serif;
+      text-decoration: none;
+
+      -webkit-transition: .2s;
+    }
+    p:hover {
+      color: hotPink;
+    }
+
+    .white-text-with-blue-shadow {
+      text-shadow: 1px 1px 2px rgb(24, 8, 8), 0 0 1em rgb(14, 14, 165), 0 0 0.2em blue;
+      color: rgb(53, 40, 233);
+    }
+
+  @media (-webkit-min-device-pixel-ratio:0) {
+    p {
+      background-color: rgb(7, 7, 122);
+      background-image: -webkit-linear-gradient(left, rgb(155, 5, 80) 10%,  rgb(141, 6, 13) 50%, transparent 50%);
+      background-position: 100% 0;
+      background-size: 200% 200%;
+      color: transparent;
+      -webkit-transition: .1s .2s;
+      -webkit-background-clip: text;
+    }
+    p:hover {
+      background-position: 0 0;
+      color: transparent;
+      transition: .4s 0;
+    }
+  }
+
+  label{
+    font-size: 20px;
+    font-family: "Fjalla One", sans-serif;
+    color: rgb(26, 8, 128);
+    font-weight: bolder;
+  }
+
+</style>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+      <source src="bg2.mp4" type="video/mp4">
+    </video>
+  <div class="padding">
+    <div class="container" style="margin-bottom: 6%" >
+      <nav class="navbar navbar-dark navbar-fixed-top" role="navigation" style="padding-top:5px; ">
+          <div cass="row">
+                  <div class="col-sm-4">
+                      <div class="container-fluid">
+                      <a class="navbar-brand" href="#"><img src="logo1.png"></a>
+                      </div>
+                  </div>
+                <div class="col-sm-4">
+                      <div class="collapse navbar-collapse" id="navbar-collapse-main"></div>
+                        <ul class="nav navbar-nav navbar-right" >
+                              <li>
+                                  <p>Your Ethereum address: <br><a target="_blank" type="addressLinks" id="myAddress" spellcheck="false" style="padding-left: 10px;"></a></p>
+                              </li>
+                              <li>
+                                <p>Your balance:<br>
+                                  <a type="addressLinks" id="myBalance" spellcheck="false" style="padding-left: 10px;">0 Ether</a></p>
+                              </li>
+                        </ul>
+                      </div>            
+                      <div class="col-sm-4">
+                        <ul class="nav navbar-nav navbar-right">
+                          <li>
+                            <p>Contract address:<br>
+                              <a target="_blank" type="addressLinks" id="contractAddress" spellcheck="false" style="padding-left: 10px;"></a></p>
+                          </li><br>
+                          <li>
+                                <p>Contract owner:<br>
+                                  <a target="_blank" type="addressLinks" id="contractOwner" spellcheck="false" style="padding-left: 10px;"></a></p>
+                        </li>
+                        </ul>
+                      </div>
+                  </div>
+          </div>
+      </nav>
+    </div>
+  </div>
+
+
+
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-6 first">
+          <div id="inputSection" style="display:none;">
+              <br>
+              <label for="registeredUsersAddressMenu">Registered Users:</label> <br>
+              <button class="button-container button-slide-horizontal" value="Copy" onclick="App.copyAddressToSend()" style="float:right;">
+                <div class="slider3 slider-horizontal">
+                  <div class="button">
+                    <i class="fa fa-copy"></i>
+                  </div>
+            </button>
+                  <div style="overflow: hidden; padding-right: 0px;">
+                    <select type="registeredUsersAddressMenu" id='registeredUsersAddressMenu' style="width: 98%;"></select>​
+                    <span id="numRegisteredUsers" style="float:left; font-size: 14px; color: rgb(218, 31, 124); font-weight: 600;"></span>
+                  </div>
+              <br><br>
+              <label for="registeredUsersAddressMenu">Receivers Eth Acc:</label> <br>
+                <textarea type="myInputTextArea" id="receiver"
+                placeholder="Copy the address of the person you want to send message." spellcheck="false" style="width: 85%; font-size:18px; padding-top: 3px;"
+                maxlength="42" rows="1"></textarea>
+                <span id="footnote" style="float:left; word-break: break-all; font-size: 14px; color: rgb(218, 31, 124); font-weight: 600;">(42 char such as:
+                0x610a6d7a4c0a6e4c9ebc408494b6e8c719fe5fd5)</span><br><br>
+                <br>
+          </div>
+            <br>
+          
+              <button class="button-container button-slide-horizontal" id="sendMessageButton" value="Send" onclick="App.sendMessage()" style="float:right" >
+                <div class="slider slider-horizontal">
+                  <div class="button">
+                    <i class="fa fa-send"></i>
+                  </div>
+                </div>
+              </button>
+              <div style="overflow: hidden; padding-right: 10px;">
+                <textarea type="messageTextArea" id="message" maxlength="30" rows="1"
+                  placeholder="Type the message here." style="width: 100%;"></textarea>​
+                <span id="numSentMessages" style="float:left; font-size: 14px; color: rgb(218, 31, 124); font-weight: 600;"></span>
+              </div>
+      </div>
+
+  <div class="col-sm-6 second">
+    
+    <br>
+
+    <div id="receivedTable" style="display:none;">
+      <label>Received Messages:</label><br>
+      <button class="button-container button-slide-horizontal" id="replyButton" value="Reply" onclick="App.replyToMessage()"
+        style="float:right">
+        <div class="slider2 slider-horizontal">
+          <div class="button">
+            <i class="fa fa-reply"></i>
+          </div>
+        </div></button>
+      <div style="overflow: hidden;">
+        <textarea type="messageTextArea" id='reply'
+          placeholder="Click on the message in the table to reveal it."></textarea>​
+        <span id="numReceivedMessages" style="float:left; font-size: 14px; color: rgb(218, 31, 124); font-weight: 600;"></span>
+      </div>
+      <br><br>
+      <table class="blueTable" id='mytable' style="margin-top: -5px; ">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>From</th>
+            <th style="display:none;">Content</th>
+          </tr>
+        </thead>
+        <tbody id="mytable-tbody">
+        </tbody>
+      </table>
+    </div> <br>
+  </div>
+  </div>
+  <div>
+  </div>
+  </div>
+  </div>
+
+      <!-- The Login Error Modal -->
+      <div id="loginErrorModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-metamask" style="text-align:justify;">
+          <center>
+            <p><em>Oops!</em></p>
+          </center>
+          <p>Could not fetch your Ethereum account. Make sure you are logged in to MetaMask, then refresh the
+            page.</p>
+        </div>
+      </div>
+
+      <!-- The MetaMask Modal -->
+      <div id="metamaskModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-metamask" style="text-align:justify;">
+          <!--<span class="close" id="metamaskModalCloseButton">&times;</span>-->
+          <center>
+            <p><em>Hi there!</em></p>
+          </center>
+          <p>This Dapp requires that you first install an Ethereum wallet. This wallet allows DChat to talk to the
+            Ethereum network. If you are using Chrome, you can download the MetaMask extension by clicking the
+            logo below. Once you have installed MetaMask
+            go ahead and login then come back to this page and refresh and you should be good to go!</p>
+          <p>-DChat team</p>
+          <a href="https://chrome.google.com/webstore/detail/nkbihfbeogaeaoehlefnkodbefgpgknn" target="_blank"><img
+              src="images/metamask_logo.png"
+              style="max-width:35%; display: block; margin-left:auto; margin-right:auto;"></a>
+        </div>
+      </div>
+
+      <!-- The Register Confirmation Modal -->
+      <div id="zeroBalanceModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-zerobalance" style="text-align:justify;">
+          <span class="close" id="zeroBalanceModalCloseButton">&times;</span>
+          <center>
+            <p><em>Oops!</em></p>
+          </center>
+          <p>Your account has zero balance. You must transfer some Ether to your MetaMask account to be able to
+            send messages with DChat.
+          </p>
+          <p>Just come back and refresh this page once you have transferred some funds.
+          </p>
+        </div>
+      </div>
+
+      <!-- The Register Confirmation Modal -->
+      <div id="registerConfirmationModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-register-confirmation" style="text-align:justify;">
+          <span class="close" id="registerConfirmationModalCloseButton">&times;</span>
+          <center>
+            <p><em>Registration confirmed</em></p>
+          </center>
+          <p>A personal DChat inbox has been established for you on the Ethereum blockchain. You're all set!
+          </p>
+        </div>
+      </div>
+
+      <!-- The Register Modal -->
+      <div id="registerModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-register" style="text-align:justify;">
+          <span class="close" id="registerModalCloseButton">&times;</span>
+          <center>
+            <p><em>User registration</em></p>
+          </center>
+          <p>Just like setting up a new Email account, as a first time user we need to setup an inbox for you on
+            the Ethereum blockchain. For this you will need to submit a transaction in MetaMask.
+          </p>
+          <p>You will only need to do this once.</p>
+          <button type="myDefaultButton" value="Ok" onclick="App.registerUser()"
+            style="margin: auto;display: block;">OK</button>
+        </div>
+      </div>
+
+      <!-- The FAQ Modal -->
+      <div id="FAQModal" class="modal" data-backdrop="static" data-keyboard="false">
+        <div class="modal-content-FAQ">
+          <span class="close" id="FAQModalCloseButton">&times;</span>
+          <center><strong><u>FAQ</u></strong></center>
+          <p><b>What is DChat?</p></b>
+          <p style="margin-top: -10px;">
+            DChat is a basic decentralized web messenger that lives in Ethereum blockchain. It allows you to
+            send small text messages from your Ethereum (public) address to another Ethereum address.
+          </p>
+          <p><b>What does DChat mean?</p></b>
+          <p style="margin-top: -10px;">
+            The unit of currency in Ethereum is called Ether. Wei is the smallest denomination of Ether. One
+            Ether equals one quintillion (1 followed by 18 zeros) of Wei. DChat is a chat app that uses Wei to
+            transmit messeges between two users.
+          </p>
+          <p><b>Is DChat private?</p></b>
+          <p style="margin-top: -10px;">
+            Beyond your Ethereum wallet, you do not need a login account to use DChat. Your identity is
+            preserved behind your Ethereum address which is read from your Ethereum wallet. DChat is anonymous
+            in this sense. Moreover, your messages are encrypted before
+            they are sent.
+          </p>
+          <p><b>How can I send feedback/suggestion to the developers?</p></b>
+          <p style="margin-top: -10px;">
+            Believe it or now, we use DChat too! Just send an DChat message to the contract owner (listed under
+            contract properties).
+        </div>
+      </div>
+    
+    <script>
+      // Get the modal
+      var zeroBalanceModal = document.getElementById('zeroBalanceModal');
+
+      var FAQModal = document.getElementById('FAQModal');
+      var registerConfirmationModal = document.getElementById('registerConfirmationModal');
+      var metamaskModal = document.getElementById('metamaskModal');
+
+      // Get the button that opens the modal
+
+      var FAQButton = document.getElementById("FAQButton");
+
+      // Get the <span> element that closes the modal
+      var zeroBalanceSpan = document.getElementById("zeroBalanceModalCloseButton");
+      var FAQSpan = document.getElementById("FAQModalCloseButton");
+      var registerSpan = document.getElementById("registerModalCloseButton");
+      var registerConfirmationSpan = document.getElementById("registerConfirmationModalCloseButton");
+
+      FAQButton.onclick = function () {
+        FAQModal.style.display = "block";
+      }
+
+      FAQSpan.onclick = function () {
+        FAQModal.style.display = "none";
+      }
+      registerSpan.onclick = function () {
+        registerModal.style.display = "none";
+      }
+      registerConfirmationSpan.onclick = function () {
+        registerConfirmationModal.style.display = "none";
+      }
+      zeroBalanceSpan.onclick = function () {
+        zeroBalanceModal.style.display = "none";
+      }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+
+        if (event.target == FAQModal) {
+          FAQModal.style.display = "none";
+        }
+        if (event.target == registerConfirmationModal) {
+          registerConfirmationModal.style.display = "none";
+        }
+        if (event.target == zeroBalanceModal) {
+          zeroBalanceModal.style.display = "none";
+        }
+      }
+
+      
+    </script>
+
+  <div class="padding">
+    <div class="container">
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+                      <div class="row">
+                              <div class="col-md-3">
+                                <ul class="nav navbar-nav navbar-left">
+                                  <li>
+                                    <p>Network:<br>
+                                    <a type="addressLinks" id="networkConnection" spellcheck="false" style="font-size: 18px"></a></p>
+                                  </li>
+                                </ul>                             
+                              </div>
+                              <div class="col-md-9">
+                                <ul class="nav navbar-nav navbar-left">
+                                  <li>
+                                  <p>Status: <br><a type="addressLinks" style="padding-bottom: 0px">
+                                  <span id="status"
+                                    style="overflow: hidden; word-wrap: break-word; display: inline-block; white-space: pre-wrap; font-size:17px; margin:0px; Color:rgb(180, 6, 6)">
+                                    Welcome to DChat</span>
+                                  <div class="loader" id="statusSpinner" style="display: none; margin: +3px -2px;"></div></a></p>
+                                  </li>
+                                  </ul>
+                              </div>
+                        </div>
+                      </nav>
+                  </div>
+          </div>
+    
+
+
+</body>
+
+</html>

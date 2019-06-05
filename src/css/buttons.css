@@ -1,0 +1,122 @@
+/*** Import Fonts ***/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+/*** General Button Styles ***/
+.button-container {
+  display: inline-block;
+  
+  cursor: pointer;
+  font-weight: 400;
+  letter-spacing: 2px;
+  height: 30px;
+  width: 100px;
+  -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.button-container .flipper {
+  transition: all .5s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.button-container .button {
+  height: 30px;
+  width: 100px;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
+  box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
+}
+.button-container .button i.fa {
+  color: white;
+  font-size: 20px;
+  margin: auto;
+  text-shadow: .5px 1px 2px #3c3c3c;
+}
+.button-container .button.front {
+  z-index: 10;
+}
+.button-container .button.back {
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------- 
+			Slide
+-------------------------------- */
+.slider i {
+  transition: all .3s ease-in-out;
+}
+.slider i:before {
+  transition: all .3s ease-in-out;
+}
+.slider i:after {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: none;
+  content: 'Send';
+  position: absolute;
+  opacity: 0;
+  top: 2.5px;
+  transition: all .3s ease-in-out;
+}
+
+/*** Horizontal Slide ***/
+.button-slide-horizontal .button {
+  background-image: linear-gradient(90deg, #ea4c89, #ee9b83);
+}
+.button-slide-horizontal i {
+  position: relative;
+  display: inline-block;
+  transition: all .3s ease-in-out;
+}
+.button-slide-horizontal i:before {
+  transition: all .3s ease-in-out;
+}
+.button-slide-horizontal:hover i {
+  padding-right: 100px;
+}
+.button-slide-horizontal:hover i:before {
+  opacity: 0;
+}
+.button-slide-horizontal:hover i:after {
+  opacity: 1;
+}
+.slider2 i:after {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: none;
+  content: 'Reply';
+  position: absolute;
+  opacity: 0;
+  top: 2.5px;
+  transition: all .3s ease-in-out;
+}
+.slider3 i:after {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: none;
+  content: 'Copy';
+  position: absolute;
+  opacity: 0;
+  top: 2.5px;
+  transition: all .3s ease-in-out;
+}
