@@ -17,6 +17,7 @@ In windows:
  -VSCode or Any better editor of your Choice
  -truffle-hdwallet-provider : version 1.0.5. To upload contracts to rinkeby.(can install directly by running npm install.)
  -lite-server: version 2.3.0 (can be installed directly by running npm install.)
+ -Python2 for the sake of drives installation that's required for running project.
  
  To run: 
  Install Nodejs, Truffle, GIT, Metamask, Ganache.
@@ -24,5 +25,7 @@ In windows:
  clone the repo 
  in terminal goto repo and type *" npm install "* or "* npm i "*
  type *" npm run dev "* to run the server. 
+ 
+ register your self then start sending messages
+ 
 
-contracts uploaded by the following ethereum address "0xf4757131978804d92a211a2f51d7dccd41bac5fa"
