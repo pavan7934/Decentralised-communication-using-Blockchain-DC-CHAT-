@@ -6,26 +6,40 @@ In this project the idea of designing the secured Decentralized communication is
 
 Requirements for running project:
 In windows:
- -Nodejs: version 9.4.0
- -NPM: version 5.6.0
- -Truffle: version 4.0.5
- -Metamask (In Chrome)
- -Ganache(To run project in offline)
- -GitBash (Terminal)
- -Git 
- -NVM (If possible)
- -VSCode or Any better editor of your Choice
- -truffle-hdwallet-provider : version 1.0.5. To upload contracts to rinkeby.(can install directly by running npm install.)
- -lite-server: version 2.3.0 (can be installed directly by running npm install.)
- -Python2 for the sake of drives installation that's required for running project.
+
+ - Nodejs: version 9.4.0
+ 
+ - NPM: version 5.6.0
+ 
+ - Truffle: version 4.0.5
+ 
+ - Metamask (In Chrome)
+ 
+ - Ganache(To run project in offline)
+ 
+ - GitBash (Terminal)
+ 
+ - Git 
+ 
+ - NVM (If possible)
+ 
+ - VSCode or Any better editor of your Choice
+ 
+ - truffle-hdwallet-provider : version 1.0.5. To upload contracts to rinkeby.(can install directly by running npm install.)
+ 
+ - lite-server: version 2.3.0 (can be installed directly by running npm install.)
+ 
+ - Python2 for the sake of drives installation that's required for running project.
  
  To run: 
  Install Nodejs, Truffle, GIT, Metamask, Ganache.
  
- clone the repo 
+ Clone the repo 
+
  in terminal goto repo and type *" npm install "* or "* npm i "*
+ 
  type *" npm run dev "* to run the server. 
  
- register your self then start sending messages
+ Register your self then start sending messages
  
 
